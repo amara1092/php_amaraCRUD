@@ -7,15 +7,13 @@
 </head>
 <!-- the body section -->
 <body>
-    <header><h1>My PHP CRUD application</h1></header>
+<?php include './includes/header.php';?>
 
     <main>
         <h1>Database Error</h1>
         <p>Error message: <?php echo $error_message; ?></p>
         <p>&nbsp;</p>
     </main>
-    <footer>
-        <p>&copy; <?php echo date("Y"); ?> My PHP CRUD application, Inc.</p>     
-    </footer>
+    <?php include './includes/footer.php';?>
 </body>
 </html>

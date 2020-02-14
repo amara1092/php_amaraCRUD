@@ -19,7 +19,7 @@ $statement->closeCursor();
 </head>
 <!-- the body section -->
 <body>
-    <header><h1>PHP CRUD</h1></header>
+<?php include './includes/header.php';?>
     <main>
         <h1>Edit record</h1>
         <form action="edit_record.php" method="post" enctype="multipart/form-data"
@@ -31,9 +31,9 @@ $statement->closeCursor();
             <input type="category_id" name="category_id"
                    value="<?php echo $record['categoryID']; ?>">
             <br>
-            <label>Code:</label>
-            <input type="input" name="code"
-                   value="<?php echo $record['code']; ?>">
+            <label>Score:</label>
+            <input type="input" name="score"
+                   value="<?php echo $record['score']; ?>">
             <br>
             <label>Name:</label>
             <input type="input" name="name"
@@ -54,8 +54,6 @@ $statement->closeCursor();
             <br>
         </form>
     </main>
-    <footer>
-        <p>&copy; <?php echo date("Y"); ?> PHP CRUD, Inc.</p>
-    </footer>
+    <?php include './includes/footer.php';?>
 </body>
 </html>

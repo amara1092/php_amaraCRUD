@@ -7,13 +7,11 @@
 </head>
 <!-- the body section -->
 <body>
-    <header><h1>PHP CRUD</h1></header>
+<?php include './includes/header.php';?>
     <main>
         <h2 class="top">Error</h2>
         <p><?php echo $error; ?></p>
     </main>
-    <footer>
-        <p>&copy; <?php echo date("Y"); ?> PHP CRUD, Inc.</p>
-    </footer>
+    <?php include './includes/footer.php';?>
 </body>
 </html>

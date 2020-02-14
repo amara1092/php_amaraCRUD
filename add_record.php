@@ -54,15 +54,16 @@ if ($category_id == null || $category_id == false ||
     require_once('database.php');
     // Add the records to the database 
     $query = "INSERT INTO records
-                 (categoryID, code, name, price, image)
+                 (categoryID, code, name, price, image, size)
               VALUES
-                 (:category_id, :code, :name, :price, :image)";
+                 (:category_id, :code, :name, :price, :image, size)";
     $statement = $db->prepare($query);
     $statement->bindValue(':category_id', $category_id);
     $statement->bindValue(':code', $code);
     $statement->bindValue(':name', $name);
     $statement->bindValue(':price', $price);
     $statement->bindValue(':image', $image);
+    $statement->bindValue(':size', $size);
     $statement->execute();
     $statement->closeCursor();
 // Display the records List page
