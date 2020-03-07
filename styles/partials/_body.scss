@@ -1,7 +1,18 @@
 //This the Body scss page//
 
 html {
-  background-color: rgb(233, 214, 214);
+  background-color: rgba(83, 82, 71, 0.164);
+}
+
+body
+{
+margin-top: 0;
+font-family: Arial, Helvetica, sans-serif;
+width: 1500px;
+margin: 0 auto;
+background-color: rgb(46, 46, 44);
+border: 1px solid rgb(129, 125, 125);
+padding: .5em 2em;
 }
 
 section {
@@ -21,22 +32,22 @@ li {
 }
 
 a {
-  color: #29407c;
+  color: #8992aa;
   font-weight: bold;
 }
 
 a:hover {
-  color: #d08504;
+  color: #9c8f77;
 }
 
 table {
-  border: 1px solid black;
+  border: 1px solid rgb(144, 143, 143);
   border-collapse: collapse;
 }
 
 
 td, th {
-  border: 1px dashed black;
+  border: 1px dashed rgb(144, 143, 143);
   padding: .2em .5em .2em .5em;
   vertical-align: top;
   text-align: left;
