@@ -41,14 +41,14 @@ $statement3->closeCursor();
 <html>
 <!-- the head section -->
 <head>
-<title>Kickst4rterz </title>
+<title>@WGE streetwear</title>
 <link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
 <!-- the body section -->
 <body>
 <?php include './includes/header.php';?>
 <main>
-<h1>Record List</h1>
+<center><h1>Record List</h1><center>
 <aside>
 <!-- display a list of categories in the sidebar-->
 <h2>Categories</h2>
@@ -72,6 +72,7 @@ $statement3->closeCursor();
 <th>Name</th>
 <th>score</th>
 <th>Price</th>
+<th>Size</th>
 <th>Delete</th>
 <th>Edit</th>
 </tr>
@@ -81,6 +82,7 @@ $statement3->closeCursor();
 <td><?php echo $record['name']; ?></td>
 <td><?php echo $record['score']; ?></td>
 <td><?php echo $record['price']; ?></td>
+<td><?php echo $record['size']; ?></td>
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">
 <input type="hidden" name="record_id"
