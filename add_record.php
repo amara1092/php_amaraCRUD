@@ -1,12 +1,15 @@
 <?php
 // Get the data
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
-$code = filter_input(INPUT_POST, 'code');
+$color = filter_input(INPUT_POST, 'color');
 $name = filter_input(INPUT_POST, 'name');
-$price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+$price = filter_input(INPUT_POST, 'price');
+$image = filter_input(INPUT_POST, 'image');
+$size = filter_input(INPUT_POST, 'size');
+
 // Validate inputs
 if ($category_id == null || $category_id == false ||
-        $code == null || $name == null || $price == null || $price == false) {
+        $color == null || $name == null || $price == null || $price == false) {
     $error = "Invalid data. Check all fields and try again.";
     include('error.php');
     exit();
@@ -54,18 +57,20 @@ if ($category_id == null || $category_id == false ||
     require_once('database.php');
     // Add the records to the database 
     $query = "INSERT INTO records
-                 (categoryID, code, name, price, image, size)
+                 (categoryID, color, name, price, image, size)
               VALUES
-                 (:category_id, :code, :name, :price, :image, size)";
+                 (:category_id, :color,:name, :price,:image,:size)";
     $statement = $db->prepare($query);
     $statement->bindValue(':category_id', $category_id);
-    $statement->bindValue(':code', $code);
+    $statement->bindValue(':color', $color);
     $statement->bindValue(':name', $name);
     $statement->bindValue(':price', $price);
     $statement->bindValue(':image', $image);
     $statement->bindValue(':size', $size);
+   
     $statement->execute();
     $statement->closeCursor();
 // Display the records List page
     include('index.php');
+    
 }

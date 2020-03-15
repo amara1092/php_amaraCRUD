@@ -1,3 +1,10 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+</head>
 <?php
 require('database.php');
 $query = 'SELECT *
@@ -33,16 +40,16 @@ $statement->closeCursor();
             </select>
             <br>
 
-            <label>score:</label>
-            <input type="input" name="score">
+            <label>Color:</label>
+            <input type="input" name="color"required>
             <br>
 
             <label>Name:</label>
-            <input type="input" name="name">
+            <input type="input" name="name"required>
             <br>
 
             <label>Price:</label>
-            <input type="input" name="price">
+            <input type="input" name="price"required>
             <br>
 
             <label>Image:</label>
@@ -50,7 +57,7 @@ $statement->closeCursor();
             <br>
 
             <label>Size:</label>
-            <input type="file" name="size" accept="size/*" />
+            <input type="input" name="size"required>
             <br>
 
             <label>&nbsp;</label>

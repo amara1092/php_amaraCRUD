@@ -41,14 +41,29 @@ $statement3->closeCursor();
 <html>
 <!-- the head section -->
 <head>
-<title>@WGE streetwear</title>
-<link rel="stylesheet" type="text/css" href="./styles/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
 <!-- the body section -->
 <body>
 <?php include './includes/header.php';?>
+<a href="http://localhost/php_amaraCRUD/?category_id=1" class="btn " role="button">Hoodies </a>
+<a href="http://localhost/php_amaraCRUD/?category_id=2" class="btn " role="button">T-shirt </a>
+<a href="http://localhost/php_amaraCRUD/?category_id=3" class="btn " role="button">Bottoms </a>
+<a href="http://localhost/php_amaraCRUD/?category_id=4" class="btn " role="button">Jackets & Coats</a>
+<a href="http://localhost/php_amaraCRUD/?category_id=5" class="btn " role="button">Tracksuits</a>
+<a href="welcome.php" class="btn btn-outline-danger" role="button">Sign Out</a>
 <main>
-<center><h1>Record List</h1><center>
+<center>
+<?php include './includes/Carosel.php';?>
+<main>
+<?php include './includes/jumbotron.php';?>
+<?php include './includes/Columns.php';?>
+
+</div>
 <aside>
 <!-- display a list of categories in the sidebar-->
 <h2>Categories</h2>
@@ -70,7 +85,7 @@ $statement3->closeCursor();
 <tr>
 <th>Image</th>
 <th>Name</th>
-<th>score</th>
+<th>Color</th>
 <th>Price</th>
 <th>Size</th>
 <th>Delete</th>
@@ -80,7 +95,7 @@ $statement3->closeCursor();
 <tr>
 <td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
 <td><?php echo $record['name']; ?></td>
-<td><?php echo $record['score']; ?></td>
+<td><?php echo $record['color']; ?></td>
 <td><?php echo $record['price']; ?></td>
 <td><?php echo $record['size']; ?></td>
 <td><form action="delete_record.php" method="post"
@@ -107,5 +122,17 @@ value="<?php echo $record['categoryID']; ?>">
 </section>
 </main>
 <?php include './includes/footer.php';?>
+<div class="pictures">
+          <center><h2>Brands Fetured on this Website</h2></center>
+          <center>
+          <img src="https://webcomicms.net/sites/default/files/clipart/174415/adidas-logo-png-transparent-images-174415-2427632.png"></img>
+          <img src="https://lh3.googleusercontent.com/proxy/DigFZ9Z45Ucc2PNROJXWI0_wzwXK3CbRuRFk6fvI07_1bEyNXw0YBaKPMCo0XvFbJd4fSXX8Z3xRbX3OyyrxG5cqp_vuMCT8LurRTFXQX3iH3pNiKCw_YfPQ76HX2EquPqYyQS5_oAlneyOmYlJ0Xie40_iA8NEmpr5oIUAEd3crTudLrf54gT6FDp3LQOI-pR1TI1rzyu6jAvqKvwES"></img>
+          <img src="https://kw.arabiccoupon.com/sites/default/files/styles/icon_image/public/store_icon/boohoo-2019-logo-ar-and-en-arabiccoupon-400x400.jpg?itok=4SPcbqWy"></img>
+          <img src="https://dark-horse.co.za/wp-content/uploads/2014/09/DH_LOGO_Nike-400-x-400.jpg"></img>
+          <img src="https://editorial.designtaxi.com/editorial-images/news-BurberryNewLogo030818/1-Burberry-New-LogoDesign.jpg"></img>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Off-White_Logo.svg/400px-Off-White_Logo.svg.png"></img>
+          <img src="https://s3.amazonaws.com/rapgenius/1354304111_Gucci-Logo1.gif"></img>
+          </center>
+</div>
 </body>
 </html>
