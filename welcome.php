@@ -29,8 +29,9 @@ $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
 //pre_r($result);
 ?>
 
-
-<?php include './includes/header.php';?>
+<a href="admin.php"  type= "submit" class="btn btn-dark" name="save">Login</a>
+<a href="register.php"  type= "submit" class="btn btn-dark" name="save">Register</a>
+<?php include './includes/Signup_header.php';?>
 <?php require_once 'process.php'; ?>
 <b>
 <center>
@@ -66,8 +67,11 @@ $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
     </div>
         <div class= "form-group"> 
         <center>
-        <a href="index.php"  type= "submit" class="btn btn-dark" name="save">Welcome to the show</a>
+        <a href="index.php"  type= "submit" class="btn btn-dark" name="save">Welcome</a>
         </center>
+        </div>
+        <div class= "form-group"> 
+
         </div>
        
        

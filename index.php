@@ -56,6 +56,8 @@ $statement3->closeCursor();
 <a href="http://localhost/php_amaraCRUD/?category_id=4" class="btn " role="button">Jackets & Coats</a>
 <a href="http://localhost/php_amaraCRUD/?category_id=5" class="btn " role="button">Tracksuits</a>
 <a href="welcome.php" class="btn btn-outline-danger" role="button">Sign Out</a>
+<a href="admin.php" class="btn btn-warning" role="button">Login</a>
+<a href="register.php" class="btn btn-info" role="button">Register</a>
 <main>
 <center>
 <?php include './includes/Carosel.php';?>
@@ -88,8 +90,7 @@ $statement3->closeCursor();
 <th>Color</th>
 <th>Price</th>
 <th>Size</th>
-<th>Delete</th>
-<th>Edit</th>
+
 </tr>
 <?php foreach ($records as $record) : ?>
 <tr>
@@ -98,22 +99,6 @@ $statement3->closeCursor();
 <td><?php echo $record['color']; ?></td>
 <td><?php echo $record['price']; ?></td>
 <td><?php echo $record['size']; ?></td>
-<td><form action="delete_record.php" method="post"
-id="delete_record_form">
-<input type="hidden" name="record_id"
-value="<?php echo $record['recordID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Delete">
-</form></td>
-<td><form action="edit_record_form.php" method="post"
-id="delete_record_form">
-<input type="hidden" name="record_id"
-value="<?php echo $record['recordID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Edit">
-</form></td>
 </tr>
 <?php endforeach; ?>
 </table>

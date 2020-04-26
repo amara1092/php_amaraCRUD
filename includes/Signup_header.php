@@ -1,6 +1,6 @@
 <center>
 <header>
-<a href="http://localhost/php_amaraCRUD/index.php">
+<a href="welcome.php">
   <img src="image_uploads/Awge.jpg"></img>
 </a>
 </header>
